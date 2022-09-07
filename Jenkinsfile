@@ -7,6 +7,9 @@ pipeline{
       }
     }
       stage('1-first parallel job'){
+        when {
+          branch 'main'
+        }
         parallel{
         stage('Phil-action'){
           steps{
@@ -21,6 +24,9 @@ pipeline{
       }
     }
         stage('2nd parallel job'){
+          when {
+            branch 'develop'
+          }
         parallel{
         stage('Anthony-actions'){
           steps{
@@ -35,6 +41,9 @@ pipeline{
       }
     }
     stage('3rd parallel job'){
+      when {
+        branch 'feature'
+      }
         parallel{
         stage('Monic-action'){
           steps{
