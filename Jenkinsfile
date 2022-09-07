@@ -8,7 +8,7 @@ pipeline{
     }
       stage('1-first parallel job'){
         parallel{
-        stage('Phil-actions'){
+        stage('Phil-action'){
           steps{
             sh 'bash -x /var/lib/jenkins/workspace/etechAppParallelJob/phil.sh'
           }
