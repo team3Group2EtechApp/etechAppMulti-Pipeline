@@ -8,7 +8,7 @@ pipeline{
     }
       stage('1-first parallel job'){
         when {
-          branch 'main'
+          branch 'develop'
         }
         parallel{
         stage('Phil-action'){
@@ -23,10 +23,7 @@ pipeline{
         }
       }
     }
-        stage('2nd parallel job'){
-          when {
-            branch 'develop'
-          }
+        stage('2nd parallel job'){          
         parallel{
         stage('Anthony-actions'){
           steps{
