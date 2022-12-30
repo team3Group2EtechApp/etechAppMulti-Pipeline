@@ -30,7 +30,7 @@ pipeline{
         parallel{
         stage('Anthony-actions'){
           steps{
-            sh 'bash -x /var/lib/jenkins/workspace/etechAppParallelJob/anthony.sh'
+            sh 'echo hello world'
           }
         }
        stage('Judith-actions'){
